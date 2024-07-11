@@ -1,34 +1,90 @@
 footer {
-	background-color: #333;
-	color: white;
-	padding: 50px 20px;
+  background-color: #ebe9e9;
+  color: #000;
+  padding: 50px 20px;
 }
 
 .footer__content {
-	display: flex;
-	justify-content: space-around;
-	gap: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .footer__section h3 {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.company p {
+  width: 220px;
+  line-height: 1.5;
+	color: #6b6b6b;
+	font-size: 12px;
+  margin-bottom: 20px;
+}
+.social__media-icons .facebook__icon,
+.instagram__icon,
+.github__icon {
+  background-color: white;
+  /* padding: 10px; */
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.facebook__icon:hover {
+  background-color: rgba(48, 112, 250, 0.849);
+  transition: 0.24s;
+}
+.instagram__icon:hover {
+  background-color: rgba(250, 48, 115, 0.849);
+  transition: 0.24s;
+}
+.github__icon:hover {
+  background-color: rgba(150, 150, 150, 0.849);
+  transition: 0.24s;
 }
 
 .footer__section ul {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer__section ul li {
-	margin-bottom: 5px;
+  margin-bottom: 13px;
+	color: #b4b4b4;
+	font-size: 12px;
 }
 
 .footer__section ul li a {
-	color: white;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .footer__bottom {
-	text-align: center;
-	margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+	font-size: 12px;
+	color: #727272;
+  border-top: 1px solid rgb(158, 158, 158);
+	padding: 20px;
+}
+
+
+.card__icons {
+	display: flex;
+	gap: 20px;
+}
+
+.visa__icon, .mastercard__icon, .paypal__icon, .applePay__icon, .googlePay__icon {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 689px) {
+	.footer__content {
+		justify-content: space-around;
+		flex-direction: column;
+		}
 }

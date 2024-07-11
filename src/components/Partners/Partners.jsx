@@ -1,4 +1,8 @@
 import './Partners.css'
+import nike from "../../assets/images/th.jpeg"
+import adidas from "../../assets/images/th (1).jpeg"
+import zara from "../../assets/images/th (2).jpeg"
+import northFace from "../../assets/images/th (3).jpeg"
 
 const Partners = () => {
   return (
@@ -6,10 +10,10 @@ const Partners = () => {
       <section className="partners">
             <h2>Partners</h2>
             <div className="partner__logos" >
-                <img src="nike.png" alt="Nike" />
-                <img src="adidas.png" alt="Adidas" />
-                <img src="zara.png" alt="Zara" />
-                <img src="north-face.png" alt="The North Face" />
+                <img src={nike} alt="Nike" />
+                <img src={adidas} alt="Adidas" />
+                <img  className="zara" src={zara} alt="zara" />
+                <img className="northFace" src={northFace} alt="The North Face" />
             </div>
         </section>
     </>

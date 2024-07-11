@@ -1,11 +1,23 @@
-import "./Header.css";
-import TopBar from "./TopBar";
-import { Link } from "react-router-dom";
-import { FiShoppingCart } from "react-icons/fi";
-import { IoHelpCircleOutline } from "react-icons/io5";
-import { FaRegUserCircle } from "react-icons/fa";
-import { IoIosSearch } from "react-icons/io";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FiShoppingCart } from 'react-icons/fi';
+import { IoHelpCircleOutline } from 'react-icons/io5';
+import { FaRegUserCircle } from 'react-icons/fa';
+import { IoIosSearch } from 'react-icons/io';
+import './Header.css';
+import TopBar from './TopBar';
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header>
       <TopBar />
@@ -13,20 +25,25 @@ const Header = () => {
         <div className="navbar__logo">
           Timbu<span>Med</span>
         </div>
-        <ul className="nav__links">
-          <li>
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className={`nav__links ${isOpen ? 'nav__links--open' : ''}`}>
+          <li onClick={closeMenu}>
             <Link to="#">Categories</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="#">Vendors</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="#">New Arrivals</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="#">About us</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="#">Contact us</Link>
           </li>
         </ul>
@@ -36,12 +53,11 @@ const Header = () => {
         </div>
         <div className="user__links">
           <div className="nav__list">
-            <FaRegUserCircle className="User__icon" />
+            <FaRegUserCircle className="user__icon" />
             <span>Hi John</span>
           </div>
           <div className="nav__list">
-
-              <IoHelpCircleOutline className="help__icon" />
+            <IoHelpCircleOutline className="help__icon" />
             <Link to="#">
               <span>Help</span>
             </Link>

@@ -1,14 +1,23 @@
 .partners {
-	padding: 50px 20px;
-	text-align: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 .partner__logos {
-	display: flex;
-	justify-content: space-around;
-	gap: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .partner__logos img {
-	max-width: 100px;
+  width: 80px;
+}
+
+.partner__logos .zara {
+  width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+	.partner__logos img{
+    width: 60px;
+  }
 }
