@@ -1,0 +1,14 @@
+.partners {
+	padding: 50px 20px;
+	text-align: center;
+}
+
+.partner__logos {
+	display: flex;
+	justify-content: space-around;
+	gap: 10px;
+}
+
+.partner__logos img {
+	max-width: 100px;
+}

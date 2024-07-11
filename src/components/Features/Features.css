@@ -1,0 +1,16 @@
+.features {
+	display: flex;
+	justify-content: space-around;
+	padding: 50px 20px;
+	background-color: #f8f8f8;
+}
+
+.feature {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.feature p {
+	width: 230px;
+	margin-top: 20px;
+	line-height: 1.4;
+}
